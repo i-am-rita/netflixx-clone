@@ -1,6 +1,6 @@
 /* variables */
 :root {
-  --primary-color: maroon;
+  --primary-color: black;
 }
 
 /* base styles*/
@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
   /* font-size: 16px; */
   background: var(--primary-color);
   color: gray;
@@ -26,6 +26,7 @@ h2,
 h3,
 h4 {
   color: #fff;
+  /* margin-bottom: 1em; */
 }
 
 a {
@@ -38,14 +39,17 @@ p {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  /* display: block; */
 }
 
 .showcase {
+  /* padding: 50px 5%; */
   width: 100%;
-  height: 105vh;
+  height: 109vh;
   position: relative;
   background: url('./netflBground.jpg') no-repeat center center/cover;
+  /* border-bottom: 8px solid grey; */
 }
 
 .showcase::after {
@@ -57,6 +61,7 @@ img {
   height: 100%;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0px 10px 50px #000000;
 }
 
 .showcase-top {
@@ -108,32 +113,40 @@ img {
   /* margin: 0 0 2rem; */
 }
 
+.showcase-content input {
+  position: absolute;
+  left: 0;
+  bottom: -8vh;
+  width: 454px;
+  height: 3rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.get-btn {
+  display: inline-block;
+  background: red;
+}
+
+.showcase-content p {
+  /* padding-top: 60px; */
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #fff;
+}
+
 h5 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 100;
   margin: 1rem 0;
   color: #fff;
   /* margin-bottom: 20px; */
 }
 
-.input_email {
-  width: 50%;
-}
-
-.input_email input {
-  width: 100%;
-  padding: 20px 10px;
-  border: 1px solid #ccc;
-  /* border-radius: 4px; */
-  box-sizing: border-box;
-  /* margin-top: px; */
-  margin-bottom: 0 0 0 5px;
-}
-
 /* Buttons */
 .btn {
   display: inline-block;
-  background: var(--primary-color);
+  background: red;
   color: white;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
@@ -158,4 +171,235 @@ h5 {
   font-size: 1rem;
   padding: 0.8rem 2.5rem;
   text-transform: uppercase;
+}
+
+hr {
+  border: 4px solid rgb(48, 46, 46);
+}
+
+/* Section */
+.sections h1 {
+  font-size: 3rem;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+.sections h3 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.split,
+.split-2,
+.split-3,
+.split-4,
+.faq {
+  border-top: rgb(48, 46, 46) solid 8px;
+  padding: 50px;
+}
+
+.split {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 50% 40%;
+  text-align: left;
+  align-items: center;
+  padding: 25px 45px 50px;
+}
+
+.split video {
+  position: relative;
+  width: 90%;
+  height: 54%;
+  grid-column: 2/2;
+  grid-row: 1/2;
+  z-index: -1;
+  object-fit: contain;
+  top: -2%;
+  left: -0.6%;
+  margin-left: 5em;
+}
+
+.split img {
+  grid-column: 2/2;
+  grid-row: 1/2;
+  width: 90%;
+  position: relative;
+  margin-left: 5em;
+}
+.description {
+  padding-left: 80px;
+}
+
+.split-2 {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 40% 50%;
+  text-align: left;
+  align-items: center;
+  padding: 25px 45px 50px;
+}
+
+.split-2 img {
+  /* grid-column: 2/2;
+  grid-row: 1/2; */
+  width: 100%;
+  position: relative;
+  /* margin-left: 5em; */
+}
+
+.description-2 {
+  padding-left: 100px;
+}
+
+.split-3 {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 50% 40%;
+  text-align: left;
+  align-items: center;
+  padding: 25px 45px 50px;
+}
+
+.split-3 video {
+  position: relative;
+  width: 65%;
+  height: 78%;
+  grid-column: 2/2;
+  grid-row: 1/2;
+  z-index: -1;
+  /* object-fit: contain; */
+  top: -55px;
+  left: 85px;
+  margin-left: 5em;
+}
+
+.split-3 img {
+  grid-column: 2/2;
+  grid-row: 1/2;
+  width: 110%;
+  position: relative;
+  margin-left: 5em;
+}
+/* .split-4 img {
+  width: 90%;
+} */
+
+.description-3 {
+  padding-left: 80px;
+  padding-right: 20px;
+}
+
+.split-4 {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 40% 50%;
+  text-align: left;
+  align-items: center;
+  padding: 25px 45px 50px;
+}
+
+.split-4 img {
+  /* grid-column: 2/;
+  grid-row: 1/2; */
+  width: 100%;
+  position: relative;
+  margin-left: 5em;
+}
+
+.description-4 {
+  padding-left: 110px;
+}
+
+/* FAQ */
+.faq {
+  text-align: center;
+}
+
+.faq h1 {
+  padding-bottom: 2.5rem;
+  font-size: 3rem;
+}
+
+.faqli {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  align-items: center;
+}
+
+.faqli li {
+  padding: 20px 30px;
+  margin: 5px;
+  font-size: 1.6rem;
+  color: #fff;
+  background: rgb(48, 46, 46);
+  text-align: left;
+  width: 65%;
+}
+
+.faq p {
+  padding-top: 60px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+.input-email {
+  display: inline-grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+}
+
+.input-email input {
+  width: 30rem;
+  height: 3.4rem;
+}
+
+.faq a button {
+  width: 12rem;
+  height: 3.3rem;
+  left: 15px;
+  background-color: red;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: -4px;
+  border: 0;
+}
+
+.footer {
+  max-width: 70%;
+  margin: 1rem auto;
+  overflow: auto;
+  text-align: center;
+}
+
+.footer .footerlists {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  text-align: left;
+  margin-bottom: 5px;
+  /* justify-content: center;
+  align-items: center;
+  margin: 10px 150px; */
+}
+.footer .footerlists a {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.footer li {
+  line-height: 2;
+}
+
+@media (max-width: 960px) {
+  .showcase {
+    /* height: 70vh; */
+  }
 }
